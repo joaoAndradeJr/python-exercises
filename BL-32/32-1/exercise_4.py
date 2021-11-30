@@ -5,13 +5,15 @@
 
 names_list = ["José", "Lucas", "Nádia", "Fernanda", "Cairo", "Joana"]
 
-char_counter = 0
-bigger_name = ""
 
-for name in names_list:
-    char_counter = len(name)
-    if len(bigger_name) < char_counter:
-        bigger_name = name
+def search_bigger_name(names):
+    char_counter = 0
+    bigger_name = ""
+    for name in names:
+        char_counter = len(name)
+        if len(bigger_name) < char_counter:
+            bigger_name = name
+    return bigger_name
 
 
-print(bigger_name)
+print(search_bigger_name(names_list))
