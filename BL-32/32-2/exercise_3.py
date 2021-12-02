@@ -4,6 +4,7 @@
 import random
 
 words_list = open("words_list.txt", mode="r")
+
 words = words_list.read().split('\n')
 
 random_word = random.choice(words)
@@ -15,12 +16,12 @@ print("A palavra é: " + scrambled_word)
 counter = 0
 win = False
 
-while (counter < 3 and win != True):
+while (counter < 3 and not win):
     guess = input("Digite a palavra correta: ")
     if (guess == random_word):
         win = True
         print("Você Acertou!!!")
-    if (win == False):
+    if (not win):
         print("Você errou...")
     counter += 1
     if (counter == 3):
