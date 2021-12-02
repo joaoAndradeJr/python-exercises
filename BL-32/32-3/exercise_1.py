@@ -9,18 +9,21 @@ Ex: 3 -> [1, 2, "Fizz"] .
 
 
 def fizzBuzz(number):
-    list_numbers = []
-    counter = 1
+    try:
+        list_numbers = []
+        counter = 1
 
-    while (counter <= number):
-        if (counter % 3 == 0 and counter % 5 == 0):
-            list_numbers.append("FizzBuzz")
-        elif (counter % 5 == 0):
-            list_numbers.append("Buzz")
-        elif (counter % 3 == 0):
-            list_numbers.append("Fizz")
-        else:
-            list_numbers.append(counter)
-        counter += 1
+        while (counter <= number):
+            if (counter % 3 == 0 and counter % 5 == 0):
+                list_numbers.append("FizzBuzz")
+            elif (counter % 5 == 0):
+                list_numbers.append("Buzz")
+            elif (counter % 3 == 0):
+                list_numbers.append("Fizz")
+            else:
+                list_numbers.append(counter)
+            counter += 1
 
-    return list_numbers
+        return list_numbers
+    except ValueError:
+        return print("Type a valid number")
