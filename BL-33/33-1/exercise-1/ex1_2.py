@@ -23,5 +23,5 @@ atributos
 - base
 
 comportamentos
-- calcular area = (base * altura) 
+- calcular area = (base * altura)
 """
