@@ -25,3 +25,12 @@ atributos
 comportamentos
 - calcular area = (base * altura)
 """
+
+
+class Retangulo:
+    def __init__(self, altura, base):
+        self.altura = altura
+        self.base = base
+
+    def calcularArea(self):
+        return self.base * self.altura
